@@ -1,0 +1,14 @@
+{
+  "name": "castrol-portafolio-proxy",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Proxy en Cloudflare Workers para el portafolio de productos de Castrol",
+  "type": "module",
+  "scripts": {
+    "dev": "wrangler dev",
+    "deploy": "wrangler deploy"
+  },
+  "devDependencies": {
+    "wrangler": "^4.164.0"
+  }
+}
