@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buscador Productos Castrol</title>
+    <link rel="icon" href="data:,">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+<body>
+    <main class="search-container" role="search" aria-label="Buscador de productos">
+        <h1 class="searchTitle">Búsqueda Productos Castrol</h1>
+
+        <div class="dark-mode-control">
+            <label class="switch">
+                <input type="checkbox" id="darkModeToggle" aria-labelledby="darkModeLabel">
+                <span class="slider"></span>
+            </label>
+            <span id="darkModeLabel">🌙 Modo oscuro</span>
+        </div>
+
+        <input type="text" id="searchInput" placeholder="Cargando productos..." aria-label="Campo de búsqueda" autocomplete="off" disabled>
+
+        <div class="filters">
+            <label class="filter">
+                <span>Vehículo</span>
+                <select id="vehicleFilter" disabled>
+                    <option value="">Todos</option>
+                </select>
+            </label>
+            <label class="filter">
+                <span>Categoría</span>
+                <select id="categoryFilter" disabled>
+                    <option value="">Todas</option>
+                </select>
+            </label>
+        </div>
+
+        <div id="status" class="status" aria-live="polite"></div>
+        <div id="results"></div>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/fuse.js@7.1.0/dist/fuse.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
